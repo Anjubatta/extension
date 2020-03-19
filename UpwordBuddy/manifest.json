@@ -1,0 +1,43 @@
+{
+	"manifest_version": 2,
+
+	"name": "Upwork Buddy",
+	"description": "A simple extension for Chrome to track upwork bid",
+	"version": "1.0",
+	"author": "@anjubatta",
+
+	"background": {
+		"scripts": ["assets/js/jquery-1.11.3.min.js", "popup.js"],
+		"persistent": true
+	},	 
+   "content_scripts": [ {      
+      "js": [ "assets/js/jquery-1.11.3.min.js"],
+      "matches": [ "https://www.upwork.com/*" ],
+      "run_at": "document_end"
+   } ],	
+	"content_security_policy": "script-src 'self'; object-src 'self'",
+	"permissions": [
+		"alarms", "background", "notifications", "tts", "storage", "identity",
+        "tabs",
+		"activeTab",
+        "*://*/*",
+        "http://*/",
+        "https://*/",
+        "file:///C:/",
+        "file:///",
+        "file://*/",
+		"webRequest",
+        "*://*.google.com/",
+		"chrome-extension://*"
+    ],	
+	"browser_action": {
+		"default_icon": "assets/icon/logo.png",
+		"default_popup": "popup.html"
+	},
+    "icons": {
+	      "128": "assets/icon/logo-19.png",
+	      "16": "assets/icon/logo-19.png",
+	      "48": "assets/icon/logo.png"
+	   },
+	 "web_accessible_resources": [ "icons/*", "content_scripts/*" ]
+}

@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>Paradise TechSoft Solutions Pvt.Ltd</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="assets/popup.css">
+	<link rel="stylesheet" href="assets/bootstrap.min.css">
+	<script src="assets/js/jquery-1.11.3.min.js"></script> 
+	<script src="assets/angular/angular.min.js"></script>
+	<script src="assets/angular/angular-sanitize.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script> 
+	<!--<script src="assets/js/background.js"></script>-->
+	<script src="popup.js"></script>
+	
+</head>
+
+<body  ng-app="app">
+	<div class="header">
+		<div class="logo">
+			<img src="assets/icon/logo.png" style="width: 40px;padding: 0px 1px 17px;" >
+			<span>Upwork Buddy</span>
+		</div>
+		<div class="header_ext">
+            <div id="biddername"></div>
+			<a id="deleteCookie"> X </a>
+		</div>	
+	</div>
+    
+<div class="clear"></div>
+<div class="body-section" id="login_section" >
+</div>
+<div class="tabs_outter">
+	<ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#cover_letter">Cover Letter</a></li>
+    <li><a data-toggle="tab" href="#feeds">Feeds</a></li>
+
+    <li><a data-toggle="tab" href="#menu2">Settings</a></li>
+  </ul>
+
+
+<div class="tab-content">
+    <div id="cover_letter" class="tab-pane fade in active">
+      <div class="body-section" id="body_section" >
+			<p id='heading'></p>		
+			
+		<div class="select_list" > 
+			<p>Cover Letter : </p>
+			<select  id="list" ></select>
+		</div>
+	</div>
+    </div>
+    <div id="feeds" class="tab-pane fade" ng-controller="feedController" >
+      <section class="work-posts">
+		<a href="jobs.html" class="btn btn-success pull-right" target="_blank" >Job Feeds</a>
+		<a href="searchjobs.html" class="btn btn-success pull-right" target="_blank" >Search Job</a>
+		
+		<div class="skills_section" style="display:none;">
+				<p id='label'>Skills : </p>
+				<ul id="skillsList">					
+				</ul>
+			</div>
+		</section>
+    </div>
+    <div id="menu2" class="tab-pane fade">
+       <div class="settings"  ng-controller="settingController" >
+			<div class="notification_outter">
+				<h5>Job Feed Notification</h5>
+				<label class="switch">
+					<input type="checkbox" ng-model="setting.Watcher" ng-click="SaveFeed()"  ng-init="checked=false" >
+					<span class="slider round"></span>
+				</label>
+			</div>
+			<div class="notification_outter">
+				<h5>Sound Notification</h5>
+				<label class="switch">
+					<input type="checkbox" ng-model="setting.Sound" ng-click="SaveSound()"  ng-init="checked=false">
+					<span class="slider round"></span>
+				</label>
+			</div>
+			
+			 
+	   </div>
+    </div>
+   
+  </div>
+  </div>
+
+</body>
+    <script src="app.angular.js"></script>
+</html>

@@ -1,0 +1,532 @@
+body {
+    width: 470px;
+	    background: #6dcbff;
+		overflow:scroll;
+}
+ul#skillsList {
+    width: 100%;
+    display: block;
+}
+
+#skillsList li {
+    display: inline-block;
+    width: 33%;
+}
+
+#skillsList li label.custom-control-label {
+    padding: 0px 7px;
+    font-size: 13px;
+    font-weight: 500;
+}
+.logo span {
+    color: #409c04;
+    font-size: 19px;
+    font-weight: 900;
+}
+textarea#cover {
+    width: 97%;
+}
+.select_list {
+    margin: 20px 0;
+}
+input#title, input#biddername {
+    width: 78%;
+    padding: 10px;
+}
+h3 {
+    font-size: 18px;
+}
+#heading {
+    font-size: 16px;
+    color: #2bb1f0;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+#copytitle{
+       background: #48cc65;
+    padding: 10px;
+    float: right;
+    width: 100px;
+    border: 1px #40b95a solid;
+}
+.content {
+    margin-top: 7px;
+}
+input#title {
+    width: 78%;
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: none;
+    border-radius: 3px;
+}
+.content textarea {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: none;
+    border-radius: 3px;
+		padding: 9px;
+}
+#copytitle {
+    background: #48cc65;
+    padding: 10px;
+    float: right;
+    width: 100px;
+    border: 1px #40b95a solid;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 3px;
+    cursor: pointer;
+    color: #fff;
+}
+body {
+    width: 470px;
+    background: #6dcbff03;
+    padding: 15px;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+h3.heading_ext {
+    font-size: 22px;
+    text-align: center;
+}
+body h3 {
+    color: #505050cf;  
+}
+.clear{clear:both;}
+.logo {
+    width: 76%;
+    display: inline-block;
+}
+.header_ext {
+   
+    display: inline-block;
+    vertical-align: top;
+}
+.cross_section {
+    display: inline-block;
+    width: 10%;
+    vertical-align: top;
+    text-align: right;
+}
+p#error-message {
+    color: #d60808;
+    margin-bottom: 4px;
+}
+div#biddername {
+    text-align: right;
+    text-transform: capitalize;
+    color: #616161;    
+    display: inline-block;
+    font-weight: 600;
+    margin-right: 10px;
+}
+a#deleteCookie {
+    color: red;
+    padding: 3px 8px;
+    background: #f3f3f3;
+    font-weight: 600;
+	box-shadow: 2px 2px 2px #d4d4d4;
+}
+.logo img {
+    max-width: 100%;
+}
+
+p#label {
+    display: inline-block;
+}
+div#skillsList {
+    display: inline-block;
+}
+#skillsList span {
+    display: inline-block;
+    background: #64c921;
+    font-size: 11px;
+    padding: 3px 10px;
+    box-shadow: 2px 2px 2px #64c921;
+    margin-right: 3px;
+    color: #fff;
+    font-weight: 600;
+}
+.skills_section {
+    padding-top: 10px;
+}
+.body-section .select_list h3 {
+    font-size: 16px;
+    color: #000;
+    font-weight: 400;
+    display: inline-block;
+    width: 23%;
+}
+select#list {
+    width: 100%;
+    padding: 11px 5px;
+    font-size: 13px;
+    border: 1px solid #d6d7d5;
+    color: #2f2f2f;
+    display: inline-block;
+    background: #fff;
+}
+/* style the container */
+.container {
+  position: relative;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px 0 30px 0;
+} 
+
+/* style inputs and link buttons */
+.container input,
+.container .btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  margin: 5px 0;
+  opacity: 0.85;
+  display: inline-block;
+  font-size: 17px;
+  line-height: 20px;
+  text-decoration: none; /* remove underline from anchors */
+}
+
+.container input:hover,
+.btn:hover {
+  opacity: 1;
+}
+
+
+
+/* style the submit button */
+.container input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+}
+
+.container input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Two-column layout */
+.col {
+  float: left;
+  width: 50%;
+  margin: auto;
+  padding: 0 50px;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* vertical line */
+.vl {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  border: 2px solid #ddd;
+  height: 175px;
+}
+
+/* text inside the vertical line */
+.vl-innertext {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  padding: 8px 10px;
+}
+.response {
+    text-align: center;
+}
+.response p.error {
+    color: red;
+    border: 1px solid;
+    padding: 5px;
+    margin: 15px;
+    border-radius: 5px;
+    background: #ffe0e0;
+}
+/* hide some text on medium and large screens */
+.hide-md-lg {
+  display: none;
+}
+
+/* on off button */
+.notification_outter h5 {
+    display: inline-block;
+    padding-top: 5px;
+    font-size: 16px;
+}
+.tabs_outter .nav-tabs>li.active>a, .tabs_outter .nav-tabs>li.active>a:focus, .tabs_outter .nav-tabs>li.active>a:hover {
+    color: #fff;
+    cursor: default;
+    border:none;
+    background-color: #409c04;
+    border-radius: 0;
+}
+.notification_outter {
+    border-bottom: 1px solid #eaeaea;
+    padding: 10px;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+      width: 55px;
+    height: 26px;
+	    margin: 10px 10px;
+		float: right;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+
+position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 4px;
+    bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #409c04;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #409c04;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+/* bottom container */
+.bottom-container {
+  text-align: center;
+  background-color: #666;
+  border-radius: 0px 0px 4px 4px;
+}
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap');
+			body {
+			background-color: #eee;
+			font-family: 'Roboto', sans-serif;
+			}
+			section.work-posts {
+    max-width: 800px;
+    /* box-shadow: 2px 2px 16px rgba(0,0,0,0.5); */
+    margin: 10px auto;
+    background-color: #fff;
+    display: table;
+}
+			.work-post {
+			border-bottom: 1px solid #ddd;
+			padding: 25px 20px;
+			float: left;
+			width: 100%;
+			}
+			.work-post h3.title {
+			font-size: 24px;
+			margin: 0px 0 20px 0;
+			}
+			.work-post h4.subtitle {
+    color: #949494;
+    font-size: 14px;
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+			.work-post p.discription {
+			color: #000;
+			font-size: 14px;
+			line-height: 25px;
+			}	
+			.work-post ul.skill-list {
+			margin: 0 0 15px 0;
+			padding: 0;
+			}		
+			.work-post ul.skill-list li {
+    display: inline-block;
+    padding: 5px 12px;
+    background-color: #e8e8e8;
+    font-size: 12px;
+    margin: 0 2px 5px;
+}		
+			.work-post span.purposel {
+			color: #949494;
+			width: 100%;
+			float: left;
+			}			
+			.work-post span.purposel strong {
+			color: #000;
+			}			
+			ul.payment {
+			float: left;
+			margin: 12px 0 0 0;
+			vertical-align: middle;
+			padding: 0;
+			width: 100%;
+			}			
+			.work-post ul.payment li {
+    display: inline-block;
+    padding: 0;
+    line-height: normal;
+    float: left;
+    color: #8b8b8b;
+    margin: 0 12px 0px 0;
+    font-size: 12px;
+}	
+			ul.payment i.fa.fa-certificate {
+			color: #3ebbb2;
+			}			
+			.work-post ul.payment i.fa.fa-star {color: #0b9a0b;}			
+			.work-post ul.payment i.fa.fa-map-marker {
+			color: #000;
+			}
+			p.discription a {
+			color: #0b9a0b;
+			}
+			.work-post h3.title a {
+			text-decoration: none;
+			color: #000;
+			}
+			.work-post h3.title a:hover {
+			color: #0b9a0b;
+			}
+			
+			/************************************************/
+			
+			.skelton {
+			width: 100%;
+			}
+			.skelton .title, .skelton p, .skelton span {
+			width: 60%;
+			height: 32px;
+			background-color: #ccc;
+			border-radius: 5px;
+			margin: 0 0 15px;
+			background-image: linear-gradient(90deg, #ddd 0px, #e8e8e8 40px, #ddd 80px);
+			background-size: 600px;
+			animation: shine-title 1.9s infinite linear;
+			}
+			.skelton p {
+			width: 100%;
+			height: 16px;
+			margin: 0 0 10px;	
+			}
+			.skelton span {
+			display: block;
+			width: 70px;
+			height: 16px;
+			margin: 0 0 10px;	
+			}
+			.skelton span.last {
+			display: block;
+			width: 120px;
+			margin: 0;
+			}
+			.skelton ul {
+			display: block;
+			padding: 0;
+			}
+			.skelton li {
+			display: inline-block;
+			width: 140px;
+			height: 33px;
+			border-radius: 3px;
+			margin-right: 10px;
+			background-color: #ddd;
+			background-image: linear-gradient(90deg, #ddd 0px, #e8e8e8 40px, #ddd 80px);
+			background-size: 600px;
+			animation: shine-lines 1.6s infinite linear;
+			}
+			
+			@keyframes shine-lines {
+			0% {
+			background-position: -100px;
+			}
+			40%, 100% {
+			background-position: 150px;
+			}
+			}
+			@keyframes shine-title {
+			0% {
+			background-position: -100px;
+			}
+			40%, 100% {
+			background-position: 1000px;
+			}
+			}
+			
+
+/* Responsive layout - when the screen is less than 650px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 650px) {
+  .col {
+    width: 100%;
+    margin-top: 0;
+  }
+  /* hide the vertical line */
+  .vl {
+    display: none;
+  }
+  /* show the hidden text on small screens */
+  .hide-md-lg {
+    display: block;
+    text-align: center;
+  }
+}
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}

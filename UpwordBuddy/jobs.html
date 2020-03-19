@@ -1,0 +1,126 @@
+<!doctype html>
+<html  ng-app="app">
+
+<head>
+	<title>Paradise TechSoft Solutions Pvt.Ltd</title>
+   
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" type="text/css">
+	     <link rel="stylesheet" type="text/css" href="jobs.css">
+		
+    <link rel="stylesheet" href="assets/bootstrap.min.css">
+    <script src="assets/js/jquery-1.11.3.min.js"></script> 
+    <script src="assets/angular/angular.min.js"></script>
+	   <script src="assets/angular/angular-sanitize.js"></script>
+    <script src="assets/angular/moment.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script> 
+	<script src="assets/js/background.js"></script> 
+	<style>
+.header,.footer {
+    padding: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+}
+.logo span {
+    color: #0b9a0b;
+    display: inline-block;
+    font-size: 22px;
+    font-weight: bold;
+}
+#biddername {
+    display: inline-block;
+	text-transform: capitalize;
+    font-weight: 600;
+}
+.header_ext a#deleteCookie {
+    display: inline-block;
+    padding: 1px 7px;
+    background-color: #eeeeee;
+    margin-left: 5px;
+    box-shadow: 1px 1px 2px #cccccc;
+    color: red;
+    font-weight: bold;
+}
+	</style>
+	
+	
+	
+	
+	
+	
+</head>
+
+<body ng-controller="feedController">
+  <section class="work-posts container">
+<div class="header">
+		<div class="logo">
+			<img src="assets/icon/logo.png" style="width: 40px;" >
+			<span>Upwork Buddy</span>
+		</div>
+		<div class="header_ext">
+            <div id="biddername"></div>
+			<a id="deleteCookie"> X </a>
+		</div>	
+	</div>
+	
+ 
+        <div class="work-post"  ng-repeat="item in allFeed">
+		 <h3 class="title"> 
+				<span  ng-if="item.premium == true" class="tags">Featured job</span>
+				<span  ng-if="item.sticky == true" class="tags">{{stickyLabel}}</span>
+				<a target="_blank" ng-href="https://www.upwork.com/jobs/{{item.ciphertext}}"> {{item.title}} </a>  
+				<a target="_blank" class="btn btn-success pull-right submitbtn" ng-href="https://www.upwork.com/ab/proposals/job/{{item.ciphertext}}/apply/#/">Submit a Proposal</a></h3>
+		<div class="col-sm-12">
+               
+                <h4 class="subtitle">{{item.budget}}</h4>
+				<h4 class="subtitle">
+				<strong  ng-if="item.type == 1"> Fixed price</strong>
+				<strong  ng-if="item.type != 1"> Hourly</strong>
+				- {{ item.tierText }} -  
+					<span ng-if="item.type == 1">
+                        Est. Budget: ${{ item.amount.amount }}
+                    </span>
+                    <span ng-if="item.type != 1">
+                        Est. time: {{ item.duration }}
+                    </span></h4>
+               <div class="desc">
+			 
+			  <div ng-hide="toggle[$index]">
+				 <p class="discription" dd-text-collapse   ng-bind-html="item.description | limitTo: 200"></p> 				
+				 <a class="readclass" ng-click="toggleFilter($index)">Read More</a>							 
+			  </div>
+			  <div ng-show="toggle[$index]">
+				 <p class="discription" dd-text-collapse   ng-bind-html="item.description"></p>   
+				 <a class="readclass" ng-click="toggleFilter($index)">Read Less</a>
+			  </div>
+			 </div>
+  
+                <ul class="skill-list" ng-if="item.attrs.length>0">
+                    <li ng-repeat="skill in item.attrs|limitTo :5">{{skill.prettyName}}</li>                   
+                    <li ng-if="(item.attrs.length>=6)">({{item.attrs.length-5}} More)</li>
+                </ul>
+				
+                <span class="purposel">Purposals:<strong> {{item.proposalsTier}}</strong></span>
+                <ul class="payment">
+                    <li ng-if="item.client.paymentVerificationStatus"><i class="fa fa-certificate verified" aria-hidden="true"></i> <strong>Payment verified </strong></li>
+                    <li ng-if="!item.client.paymentVerificationStatus"><i class="fa fa-certificate unverified" aria-hidden="true"></i> <strong>Payment unverified </strong></li>
+					
+                    <li >					
+					<i  ng-repeat="star in [1,2,3,4,5]" class="fa fa-star"  ng-class="{'feed-active-star':(item.client.totalFeedback|number:2) > $index}"  aria-hidden="true"></i>
+					</li>
+					
+                    <li><strong>${{item.client.totalSpent|number:0}}</strong> spent</li>
+                    <li><i class="fa fa-map-marker" aria-hidden="true"></i><strong> {{item.client.location.country}} </strong></li>
+					 <li><i class="fa fa-clock-o" aria-hidden="true"></i><strong > {{item.publishedOn | fromNow}}  </strong></li>
+					
+                </ul>
+				</div>
+				
+            </div>
+			<div class="footer"><p>© 2019 - 2020 Paradise TechSoft Solutions Pvt. Ltd.</p></div>
+    </section>
+    <script src="app.angular.js"></script>
+</body>
+</html>

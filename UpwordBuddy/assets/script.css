@@ -1,0 +1,24 @@
+select#mySelect {
+    padding: 10px;
+    background: #fff;
+    width: 20%;
+    margin: 18px 0px;
+}
+button#btncopyurl {
+    float: none;
+}
+button#btncopyurl:focus {  
+    outline: none;
+}
+button#btncopyurl {
+    display: inline-block;
+    width: auto;
+    border: none;
+    vertical-align: middle;
+    background-color: transparent;
+    color: #37a000;
+}
+button#btncopyurl::before {
+	font-size: 17px;
+    margin-right: 5px;
+}
